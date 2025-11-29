@@ -1,1 +1,14 @@
+# --- Mac System Files (ملفات الماك المخفية) ---
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- C++ Compiled Files (ملفات التشغيل اللي مش عايزينها) ---
+*.out
+*.exe
+*.o
+*.obj
+
+# --- VS Code Settings (إعدادات البرنامج الشخصية) ---
+.vscode/
