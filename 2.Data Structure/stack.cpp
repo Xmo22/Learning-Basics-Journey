@@ -65,7 +65,7 @@ void get_top(int &stacktop){
 void display_arr(){
     cout << "[ " ;
     for(int i = top; i >= 0; i--){
-        cout <<item[i]<<",";
+        cout <<item[i]<<" ";
     }
     cout << "]";
     cout << endl;
