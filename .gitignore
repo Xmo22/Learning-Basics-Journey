@@ -12,4 +12,7 @@
 
 # --- VS Code Settings (إعدادات البرنامج الشخصية) ---
 .vscode/
+
+# --- Output Folders (مجلدات الإخراج) ---
 output/
+**/output/
