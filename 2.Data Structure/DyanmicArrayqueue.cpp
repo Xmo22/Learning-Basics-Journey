@@ -1,22 +1,33 @@
 #include <iostream>
 #include <cassert>
 using namespace std;
-const int max_length = 100;
+
 
 class queuearray{
 
     private:
     int rear;
     int front;
-    int arr[max_length];
+    int *arr;
     int count;
+    int max_length;
 
 
     public:
-    queuearray(){
+    queuearray(int size){
+        if(size <= 0){
+            max_length = 100;
+        }
+        else{
+            max_length = size;
+        }
+        arr = new int[max_length];
         rear = max_length - 1;
         front = 0;
         count = 0;
+    }
+    ~queuearray() {
+        delete[] arr;
     }
 
     bool isEmpty(){
@@ -78,7 +89,7 @@ class queuearray{
 
 
 int main(){
-    queuearray q1;
+    queuearray q1(5);
     q1.enqueue(10);
     q1.enqueue(20);
     q1.enqueue(30);
@@ -87,10 +98,11 @@ int main(){
     cout << "Front item: " << q1.getFront() << endl; 
     cout << "Rear item: " << q1.getRear() << endl;   
     q1.display_info();
-    q1.dequeue();
-        cout << "Front item: " << q1.getFront() << endl; 
-    cout << "Rear item: " << q1.getRear() << endl;   // 60
+    q1.enqueue(60);
     q1.display_info();
+    
+   
+
     
   
     
