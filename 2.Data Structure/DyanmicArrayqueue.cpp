@@ -69,6 +69,22 @@ class queuearray{
         return arr[rear];
     }
 
+int searchqueue(int num) {
+
+    if (isEmpty()) {
+        return -1; 
+    }
+
+    for (int i = 0; i < count; i++) {
+        
+        int index = (front + i) % max_length;
+        if (arr[index] == num) {
+            return index; 
+        }
+    }
+    return -1;
+}
+
     void display_info(){
         if(isEmpty()){
             cout << "Queue is Empty there is no thing to display" << "\n";
@@ -79,7 +95,7 @@ class queuearray{
             int index = (front + i) % max_length ;
             cout << arr[index] << " " ;
             }
-            cout << "]";
+            cout << "]" << endl;
         }
     }
 
@@ -99,6 +115,12 @@ int main(){
     cout << "Rear item: " << q1.getRear() << endl;   
     q1.display_info();
     q1.enqueue(60);
+    q1.dequeue();
+    cout << q1.getFront() << endl;;
+    q1.display_info();
+    cout << q1.searchqueue(40) << endl;
+    q1.enqueue(60);
+    cout << q1.getRear() << "\n";
     q1.display_info();
     
    
