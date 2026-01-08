@@ -16,3 +16,4 @@ string removeExclamationMarks(string str){
 int main(){
     cout << removeExclamationMarks("Hel!lo! !world!") << "\n";
 }
+
